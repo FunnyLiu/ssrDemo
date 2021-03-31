@@ -9,6 +9,8 @@ export default (props: SProps) => {
   const { state, dispatch } = useContext<IContext<IData>>(window.STORE_CONTEXT)
   return (
     <div>
+      {/* a标签就走服务端渲染 */}
+      <a href="/detail/cbba934b14f747049187">click here is a </a>
       <Search></Search>
       {
         state?.indexData?.data?.[0]?.components ? <div>
